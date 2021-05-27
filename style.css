@@ -1,0 +1,240 @@
+/*@font-face {
+  font-family:'broken15';
+  src: url('MacintoshHD/Users/tjtimusk/Desktop/Coding/Side_Projects/DMZ/Fonts/broken15.TTF') format('truetype');
+  src: local('broken15') url('fonts/broken15.ttf') format('truetype');
+  src: url('broken15.woff') format('woff');
+  src: url('broken15.woff2') format('woff2');
+  font-weight: normal;
+  font-size: normal;
+}*/
+@font-face {
+  font-family: 'broken_15regular';
+  src: url('fonts/broken15.woff2') format('woff2'),
+    url('fonts/broken15.woff') format('woff'),
+    url('fonts/broken15.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Main code*/
+tml, body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  color: #FFFFFF;
+  margin: 0;
+  background-color: #000000;
+}
+
+/*Common Header/Navigation bar */
+.headercontainer {
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+}
+
+.logo {
+  z-index: 10;
+  width: 100%;
+  max-width: 250px;
+  max-height: auto;
+}
+
+.nav {
+  z-index: 10;
+  top: 50%;
+  line-height: 60px;
+  margin: 0 auto;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+a.nav {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'broken_15regular', 'Helvetica', sans-serif;
+  font-size: 3.0rem;
+  padding: 0px 10px;
+  margin: auto;
+}
+
+a.nav:hover {
+  /*These don;t work well with the broken 15 font....
+  color: #FFFFFF;
+  text-decoration: line-through;*/
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+p {
+  color: #FFFFFF;
+}
+
+/*Common Footer */
+footer {
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.socials {
+  text-align: center;
+}
+
+.socials li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.socials li a {
+  border-bottom: none;
+}
+
+.socials li img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  opacity: 75%;
+}
+
+.socials li img:hover {
+  /*These don;t work well with the broken 15 font....
+    color: #FFFFFF;
+    text-decoration: line-through;*/
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 100%;
+}
+
+/* Homepage Styling*/
+/* Slideshow container */
+.carousel {
+  position: relative;
+  height: 675px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 675px;
+  margin: 0 auto;
+}
+
+.carouseltrack {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Hide the images by default */
+.slideimg {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/*About Page Styling*/
+.abouttext {
+  max-width: 600px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.divider {
+  justify-content: center;
+  margin: 0 auto;
+  display: grid;
+}
+
+.intextmedia {
+  display: grid;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.intextmedia img {
+  justify-content: center;
+  margin: 0 auto;
+  max-height: 400px;
+}
+
+.caption {
+  font-size: .8rem;
+  opacity: .8;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/*Release Page Styling */
+section.releasecontainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 40px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.releaseimg {
+  max-width: 250px;
+  max-height: auto;
+}
+
+.releaseimg:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}

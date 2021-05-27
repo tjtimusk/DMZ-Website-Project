@@ -1,0 +1,162 @@
+
+/* tryig to link the original dmz font but it no work
+@font-face {
+  font-family: 'broken15';
+  src: url('/media/fonts/BROKEN15.TTF') format ('truetype'),
+  src: url('/media/fonts/BROKEN15.woff') format ('woff'),
+  src: url('/media/fonts/BROKEN15.woff2') format ('woff2');
+}
+*/
+
+tml, body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  color: #FFFFFF;
+  margin: 0;
+  background-color: #000000;
+}
+
+.headercontainer {
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+
+}
+
+.logo {
+  z-index: 10;
+  width: 100%;
+  max-width: 250px;
+  max-height: auto;
+}
+
+.nav {
+  z-index: 10;
+  top: 50%;
+  line-height: 60px;
+  margin: 0 auto;
+  vertical-align: middle;
+  justify-content: center;
+
+}
+
+a.nav {
+  color: #EEEEEE;
+  text-decoration: none;
+  font-family: 'broken15','Helvetica', sans-serif;
+  font-size: 2.5rem;
+  padding: 0px 10px;
+  margin: auto;
+}
+
+a.nav:hover {
+  color: #FFFFFF;
+  text-decoration: line-through;
+}
+
+p {
+  color: #FFFFFF;
+}
+
+.abouttext {
+  max-width: 600px;
+  justify-content: center;
+  margin: 0 auto;
+}
+section.releasecontainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+.releaseimg {
+  max-width: 250px;
+  max-height: auto;
+  display: inline;
+  z-index: 10;
+}
+
+.releaseimg:hover{
+  max-width: 255px;
+  z-index: 9;
+}
+
+
+.carousel {
+  position: relative;
+  height: 675px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 675px;
+  margin: 0 auto;
+}
+
+.carouseltrackcontainer {
+  background-color: lightgreen;
+  height: auto;
+  width: 100%;
+}
+
+.carouseltrack {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.slideimg {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  object-fit: cover;
+
+}
+.carouselbutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carouselbutton.left {
+  left: -40px;
+}
+
+.carouselbutton.right {
+  right: -40px;
+}
+
+.carouselnav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.carouselindicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 5px;
+  background: #FFFFFF;
+  opacity: 20%;
+  padding: 10px 0;
+  margin: 0 5px;
+}
+
+.carouselindicator.currentslide {
+  background: #FFFFFF;
+}
+
+footer {
+  justify-content: center;
+  margin: 0 auto;
+}
