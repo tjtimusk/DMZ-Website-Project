@@ -12,68 +12,68 @@
   src: url('fonts/broken15.woff2') format('woff2'),
     url('fonts/broken15.woff') format('woff'),
     url('fonts/broken15.ttf') format('truetype');
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
 }
 
 /*Main code*/
 tml, body {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   font-weight: 300;
   line-height: 1.5;
+  min-height: 100%;
 }
 
 body {
-  font-family: 'Helvetica', sans-serif;
-  color: #FFFFFF;
-  margin: 0;
   background-color: #000000;
+  color: #FFFFFF;
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
 }
 
 /*Common Header/Navigation bar */
 .headercontainer {
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1600px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
 .logo {
-  z-index: 10;
-  width: 100%;
-  max-width: 250px;
   max-height: auto;
+  max-width: 250px;
+  width: 100%;
+  z-index: 10;
 }
 
 .nav {
-  z-index: 10;
-  top: 50%;
+  justify-content: center;
   line-height: 60px;
   margin: 0 auto;
+  top: 50%;
   vertical-align: middle;
-  justify-content: center;
+  z-index: 10;
 }
 
 a.nav {
   color: #FFFFFF;
-  text-decoration: none;
   font-family: 'broken_15regular', 'Helvetica', sans-serif;
   font-size: 3.0rem;
-  padding: 0px 10px;
   margin: auto;
+  padding: 0px 10px;
+  text-decoration: none;
 }
 
 a.nav:hover {
   /*These don;t work well with the broken 15 font....
   color: #FFFFFF;
   text-decoration: line-through;*/
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
   transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 p {
@@ -100,37 +100,37 @@ footer {
 }
 
 .socials li img {
-  width: 50px;
   height: 50px;
   margin-right: 20px;
   opacity: 75%;
+  width: 50px;
 }
 
 .socials li img:hover {
   /*These don;t work well with the broken 15 font....
     color: #FFFFFF;
     text-decoration: line-through;*/
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
   opacity: 100%;
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 /* Homepage Styling*/
 /* Slideshow container */
 .carousel {
-  position: relative;
   height: 675px;
-  width: 90%;
-  max-width: 1200px;
   max-height: 675px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  width: 90%;
 }
 
 .carouseltrack {
-  padding: 0;
-  margin: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hide the images by default */
@@ -140,30 +140,30 @@ footer {
 
 /* Next & previous buttons */
 .prev, .next {
+  border-radius: 0 3px 3px 0;
+  color: white;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
+  font-size: 18px;
+  font-weight: bold;
   margin-top: -22px;
   padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
+  position: absolute;
+  top: 50%;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
+  width: auto;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
   border-radius: 3px 0 0 3px;
+  right: 0;
 }
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
   animation-duration: 0.5s;
+  animation-name: fade;
 }
 
 @-webkit-keyframes fade {
@@ -188,15 +188,15 @@ footer {
 
 /*About Page Styling*/
 .abouttext {
-  max-width: 600px;
   justify-content: center;
   margin: 0 auto;
+  max-width: 600px;
 }
 
 .divider {
+  display: grid;
   justify-content: center;
   margin: 0 auto;
-  display: grid;
 }
 
 .intextmedia {
@@ -213,30 +213,30 @@ footer {
 
 .caption {
   font-size: .8rem;
-  opacity: .8;
   justify-content: center;
   margin: 0 auto;
+  opacity: .8;
 }
 
 /*Full Release Page Styling */
 section.releasecontainer {
   display: grid;
+  grid-gap: 40px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  grid-gap: 40px;
   justify-content: center;
   margin: 0 auto;
 }
 
 .releaseimg {
-  max-width: 250px;
   max-height: auto;
+  max-width: 250px;
 }
 
 .releaseimg:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
   transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 /*Individual Release Page Styling*/
@@ -244,15 +244,15 @@ section.releasecontainer {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  padding: 30px;
   max-width: 80%;
+  padding: 30px;
 }
 
 .releasepagetitle {
   display: flex;
-  font-size: 2.5rem;
   /*font-family: 'broken_15regular';
   Tried with the DMZ font but it doesn't look great*/
+  font-size: 2.5rem;
   justify-content: center;
   margin: 0 auto;
 }
@@ -262,6 +262,6 @@ section.releasecontainer {
 }
 
 .releasepageimg {
-  max-width: 550px;
   max-height: auto;
+  max-width: 550px;
 }
