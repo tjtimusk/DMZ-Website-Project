@@ -9,9 +9,9 @@
 }*/
 @font-face {
   font-family: 'broken_15regular';
-  src: url('fonts/broken15.woff2') format('woff2'),
-    url('fonts/broken15.woff') format('woff'),
-    url('fonts/broken15.ttf') format('truetype');
+  src: url('../fonts/broken15.woff2') format('woff2'),
+    url('../fonts/broken15.woff') format('woff'),
+    url('../fonts/broken15.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
