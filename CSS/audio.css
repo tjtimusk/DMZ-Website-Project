@@ -1,0 +1,4 @@
+audio {
+  filter: sepia(20%) saturate(70%) grayscale(3) contrast(99%) invert(12%);
+  height: 25px;
+}
