@@ -218,7 +218,7 @@ footer {
   margin: 0 auto;
 }
 
-/*Release Page Styling */
+/*Full Release Page Styling */
 section.releasecontainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -237,4 +237,31 @@ section.releasecontainer {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+/*Individual Release Page Styling*/
+.releasepagecontainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 80%;
+}
+
+.releasepagetitle {
+  display: flex;
+  font-size: 2.5rem;
+  /*font-family: 'broken_15regular';
+  Tried with the DMZ font but it doesn't look great*/
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.releasedescriptiontext {
+  max-width: 35%;
+}
+
+.releasepageimg {
+  max-width: 400px;
+  max-height: auto;
 }
