@@ -261,7 +261,30 @@ section.releasecontainer {
   max-width: 35%;
 }
 
+.releasepageimgcontainer {
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
 .releasepageimg {
-  max-height: auto;
+  height: auto;
+  max-height: 550px;
   max-width: 550px;
+  position: absolute;
+  width: 100%;
+}
+
+/* Release page Hover FX */
+.releasepageimg.reverse {
+  display: none;
+}
+
+.releasepageimgcontainer:hover>.releasepageimg.cover {
+  display: none;
+}
+
+.releasepageimgcontainer:hover>.releasepageimg.reverse {
+  display: flex;
+  z-index: 2;
 }
