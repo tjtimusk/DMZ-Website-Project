@@ -1,12 +1,3 @@
-/*@font-face {
-  font-family:'broken15';
-  src: url('MacintoshHD/Users/tjtimusk/Desktop/Coding/Side_Projects/DMZ/Fonts/broken15.TTF') format('truetype');
-  src: local('broken15') url('fonts/broken15.ttf') format('truetype');
-  src: url('broken15.woff') format('woff');
-  src: url('broken15.woff2') format('woff2');
-  font-weight: normal;
-  font-size: normal;
-}*/
 @font-face {
   font-family: 'broken_15regular';
   src: url('../fonts/broken15.woff2') format('woff2'),
@@ -250,8 +241,8 @@ section.releasecontainer {
 
 .releasepagetitle {
   display: flex;
-  /*font-family: 'broken_15regular';
-  Tried with the DMZ font but it doesn't look great*/
+  /*Tried with the DMZ font but it doesn't look great
+  font-family: 'broken_15regular';*/
   font-size: 2.5rem;
   justify-content: center;
   margin: 0 auto;
@@ -261,17 +252,10 @@ section.releasecontainer {
   max-width: 35%;
 }
 
-.releasepageimgcontainer {
-  display: flex;
-  height: auto;
-  width: 100%;
-}
-
 .releasepageimg {
   height: auto;
   max-height: 550px;
   max-width: 550px;
-  position: absolute;
   width: 100%;
 }
 
