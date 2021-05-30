@@ -1,13 +1,20 @@
+/*Main code*/
+body {
+  background-color: #202020;
+  color: #FFFFFF;
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+}
+
 @font-face {
   font-family: 'broken_15regular';
-  src: url('../fonts/broken15.woff2') format('woff2'),
-    url('../fonts/broken15.woff') format('woff'),
-    url('../fonts/broken15.ttf') format('truetype');
+  src: url('../media/fonts/broken15.woff2') format('woff2'),
+    url('../media/fonts/broken15.woff') format('woff'),
+    url('../media/fonts/broken15.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
-/*Main code*/
 tml, body {
   display: flex;
   flex-direction: column;
@@ -17,31 +24,9 @@ tml, body {
   place-items: center;
 }
 
-body {
-  background-color: #202020;
-  color: #FFFFFF;
-  font-family: 'Helvetica', sans-serif;
-  margin: 0;
-}
-
 /*Common Header/Navigation bar */
-.headercontainer {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: auto;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1600px;
-  place-items: center;
-}
-
-.nav {
-  justify-content: center;
-  line-height: 60px;
-  margin: 0 auto;
-  top: 50%;
-  vertical-align: middle;
-  z-index: 10;
+p {
+  color: #FFFFFF;
 }
 
 a.nav {
@@ -62,11 +47,14 @@ a.nav:hover {
   -webkit-transform: scale(1.1);
 }
 
-.nav.logo {
-  font-size: 6.0rem;
-  padding-top: 0px;
-  top: 0;
-  width: 100%;
+.headercontainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1600px;
+  place-items: center;
 }
 
 /* CSS for using the Logo Image
@@ -76,9 +64,22 @@ a.nav:hover {
   max-width: 250px;
   width: 100%;
   z-index: 10;
-}*/
-p {
-  color: #FFFFFF;
+}
+*/
+.nav {
+  justify-content: center;
+  line-height: 60px;
+  margin: 0 auto;
+  top: 50%;
+  vertical-align: middle;
+  z-index: 10;
+}
+
+.nav.logo {
+  font-size: 6.0rem;
+  padding-top: 0px;
+  top: 0;
+  width: 100%;
 }
 
 /*Common Footer */
@@ -140,14 +141,6 @@ footer {
 }
 
 /* Hide the images by default */
-.slideimg {
-  display: none;
-  height: 100%;
-  max-height: 675px;
-  max-width: 1200px;
-  width: 100%;
-}
-
 .carouselbutton {
   background: transparent;
   border: 0;
@@ -156,6 +149,14 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.slideimg {
+  display: none;
+  height: 100%;
+  max-height: 675px;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .carouselbutton img {
@@ -171,28 +172,6 @@ footer {
   right: -40px;
 }
 
-/* Old Button Stylings
-Next & previous buttons
-.prev, .next {
-  border-radius: 0 3px 3px 0;
-  color: white;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 16px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: 0.6s ease;
-  user-select: none;
-  width: auto;
-}
-
-Position the "next button" to the right
-.next {
-  border-radius: 3px 0 0 3px;
-  right: 0;
-}*/
 /* Fading animation */
 .fade {
   animation-duration: 0.5s;
@@ -274,12 +253,31 @@ section.releasecontainer {
 }
 
 /*Individual Release Page Styling*/
+.releasedescriptiontext {
+  max-width: 35%;
+}
+
 .releasepagecontainer {
   display: flex;
   justify-content: center;
   margin: 0 auto;
   max-width: 80%;
   padding: 30px;
+}
+
+.releasepageimg {
+  border-radius: 50%;
+  height: auto;
+  max-height: 550px;
+  max-width: 550px;
+  width: 100%;
+}
+
+.releasepageimgcontainer {
+  height: 100%;
+  max-height: 550px;
+  max-width: 550px;
+  width: 100%
 }
 
 .releasepagetitle {
@@ -289,18 +287,6 @@ section.releasecontainer {
   font-size: 2.5rem;
   justify-content: center;
   margin: 0 auto;
-}
-
-.releasedescriptiontext {
-  max-width: 35%;
-}
-
-.releasepageimg {
-  border-radius: 50%;
-  height: auto;
-  max-height: 550px;
-  max-width: 550px;
-  width: 100%;
 }
 
 /* Release page Hover FX */
