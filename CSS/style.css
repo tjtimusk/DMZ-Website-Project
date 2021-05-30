@@ -14,10 +14,11 @@ tml, body {
   font-weight: 300;
   line-height: 1.5;
   min-height: 100%;
+  place-items: center;
 }
 
 body {
-  background-color: #000000;
+  background-color: #202020;
   color: #FFFFFF;
   font-family: 'Helvetica', sans-serif;
   margin: 0;
@@ -31,13 +32,7 @@ body {
   justify-content: center;
   margin: 0 auto;
   max-width: 1600px;
-}
-
-.logo {
-  max-height: auto;
-  max-width: 250px;
-  width: 100%;
-  z-index: 10;
+  place-items: center;
 }
 
 .nav {
@@ -54,7 +49,7 @@ a.nav {
   font-family: 'broken_15regular', 'Helvetica', sans-serif;
   font-size: 3.0rem;
   margin: auto;
-  padding: 0px 10px;
+  padding: 30px 30px;
   text-decoration: none;
 }
 
@@ -67,17 +62,36 @@ a.nav:hover {
   -webkit-transform: scale(1.1);
 }
 
+.nav.logo {
+  font-size: 6.0rem;
+  padding-top: 0px;
+  top: 0;
+  width: 100%;
+}
+
+/* CSS for using the Logo Image
+.logo {
+  background: transparent;
+  max-height: auto;
+  max-width: 250px;
+  width: 100%;
+  z-index: 10;
+}*/
 p {
   color: #FFFFFF;
 }
 
 /*Common Footer */
 footer {
+  bottom: 0;
   justify-content: center;
+  place-items: center;
   margin: 0 auto;
+  position: static;
 }
 
 .socials {
+  bottom: 0;
   text-align: center;
 }
 
@@ -250,6 +264,7 @@ section.releasecontainer {
 .releaseimg {
   max-height: auto;
   max-width: 250px;
+  border-radius: 50%;
 }
 
 .releaseimg:hover {
@@ -281,6 +296,7 @@ section.releasecontainer {
 }
 
 .releasepageimg {
+  border-radius: 50%;
   height: auto;
   max-height: 550px;
   max-width: 550px;
