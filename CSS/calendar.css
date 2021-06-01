@@ -19,9 +19,9 @@ ul {
   display: inline-block;
   height: 100%;
   justify-content: center;
-  margin: 0 auto;
   max-width: 1600px;
-  width: 95%;
+  min-width: 600px;
+  width: 100%;
 }
 
 /* Month header */

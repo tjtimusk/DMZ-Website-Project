@@ -1,8 +1,9 @@
 /*Main code*/
 body {
   background-color: #202020;
-  color: #FFFFFF;
+  color: #dddddd;
   font-family: 'Helvetica', sans-serif;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -24,37 +25,48 @@ tml, body {
   place-items: center;
 }
 
+.pagecontent {
+  justify-content: center;
+  margin: 30px auto;
+  margin-bottom: 110px;
+  place-items: center;
+}
+
 /*Common Header/Navigation bar */
 p {
-  color: #FFFFFF;
+  color: #cccccc;
 }
 
 a.nav {
-  color: #FFFFFF;
+  color: #cccccc;
   font-family: 'broken_15regular', 'Helvetica', sans-serif;
   font-size: 3.0rem;
-  margin: auto;
+  justify-content: center;
+  margin: 0 auto;
   padding: 30px 30px;
+  place-items: center;
   text-decoration: none;
 }
 
 a.nav:hover {
   /*These don;t work well with the broken 15 font....
-  color: #FFFFFF;
   text-decoration: line-through;*/
-  transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+  color: #ffffff;
+  transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
 }
 
 .headercontainer {
+  background-color: #101010;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 20% 20% 20%;
   grid-template-rows: auto;
+  height: 110px;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1600px;
   place-items: center;
+  width: 100%;
 }
 
 /* CSS for using the Logo Image
@@ -70,29 +82,36 @@ a.nav:hover {
   justify-content: center;
   line-height: 60px;
   margin: 0 auto;
+  place-items: center;
   top: 50%;
   vertical-align: middle;
+  width: 100%;
   z-index: 10;
 }
 
 .nav.logo {
-  font-size: 6.0rem;
-  padding-top: 0px;
+  font-size: 7.0rem;
+  padding-top: 5px;
   top: 0;
   width: 100%;
 }
 
 /*Common Footer */
 footer {
+  background-color: #101010;
   bottom: 0;
+  height: auto;
   justify-content: center;
   place-items: center;
   margin: 0 auto;
-  position: static;
+  margin-top: 60px;
+  position: fixed;
+  width: 100%;
 }
 
 .socials {
   bottom: 0;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -101,14 +120,13 @@ footer {
   list-style-type: none;
 }
 
-.socials li a {
+/*.socials li a {
   border-bottom: none;
-}
-
+}*/
 .socials li img {
   height: 50px;
-  margin-right: 20px;
-  opacity: 75%;
+  margin: 0px 20px;
+  opacity: .75;
   width: 50px;
 }
 
@@ -116,7 +134,7 @@ footer {
   /*These don;t work well with the broken 15 font....
     color: #FFFFFF;
     text-decoration: line-through;*/
-  opacity: 100%;
+  opacity: 1;
   transform: scale(1.1);
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -125,19 +143,36 @@ footer {
 /* Homepage Styling*/
 /* Slideshow container */
 .carousel {
-  height: 675px;
+  height: 563px;
+  margin: 0 auto;
   max-height: 675px;
   max-width: 1200px;
-  margin: 0 auto;
+  min-height: 338px;
+  min-width: 600px;
   position: relative;
-  width: 90%;
+  width: 1000px;
 }
 
 .carouseltrack {
+  height: 100%;
   list-style: none;
   margin: 0;
-  padding: 0;
   overflow: hidden;
+  padding: 0;
+  width: auto;
+}
+
+.carouseltrackcontainer {
+  height: 100%;
+  position: relative;
+  width: auto;
+}
+
+.slideimg {
+  display: none;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 /* Hide the images by default */
@@ -149,14 +184,6 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.slideimg {
-  display: none;
-  height: 100%;
-  max-height: 675px;
-  max-width: 1200px;
-  width: 100%;
 }
 
 .carouselbutton img {
@@ -202,7 +229,7 @@ footer {
 .abouttext {
   justify-content: center;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 60%;
 }
 
 .divider {
@@ -238,23 +265,52 @@ section.releasecontainer {
   grid-template-rows: auto;
   justify-content: center;
   margin: 0 auto;
+  place-items: center;
 }
 
 .releaseimg {
+  background-color: #000000;
+  opacity: .80;
   max-height: auto;
   max-width: 250px;
   border-radius: 50%;
 }
 
 .releaseimg:hover {
-  transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+  opacity: 100%;
+  transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+}
+
+.releasepagetext {
+  justify-content: center;
+  place-items: center;
+  color: #aaaaaa;
 }
 
 /*Individual Release Page Styling*/
-.releasedescriptiontext {
-  max-width: 35%;
+audio {
+  vertical-align: center;
+}
+
+.audiosamplecontainers {
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+}
+
+.audiotitle {
+  font-size: .9rem;
+}
+
+.releasepagedescription {
+  max-width: 60%;
+  margin: 2px 10px;
+}
+
+.releasepagetext {
+  text-align: center;
 }
 
 .releasepagecontainer {
@@ -268,15 +324,15 @@ section.releasecontainer {
 .releasepageimg {
   border-radius: 50%;
   height: auto;
-  max-height: 550px;
-  max-width: 550px;
+  max-height: 450px;
+  max-width: 450px;
   width: 100%;
 }
 
 .releasepageimgcontainer {
   height: 100%;
-  max-height: 550px;
-  max-width: 550px;
+  max-height: 450px;
+  max-width: 450px;
   width: 100%
 }
 
