@@ -44,7 +44,6 @@ a.nav {
   font-size: 3.0rem;
   justify-content: center;
   margin: 0 auto;
-  padding: 30px 30px;
   place-items: center;
   text-decoration: none;
 }
@@ -60,9 +59,6 @@ a.nav:hover {
 
 .headercontainer {
   background-color: #101010;
-  display: grid;
-  grid-template-columns: 20% 20% 20% 20%;
-  grid-template-rows: auto;
   height: 10%;
   justify-content: center;
   margin: 0 auto;
@@ -73,19 +69,28 @@ a.nav:hover {
   z-index: 2;
 }
 
-.nav {
-  justify-content: center;
-  line-height: 15px;
+.navcontainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  height: 100%;
   margin: 0 auto;
-  top: 0;
-  vertical-align: middle;
-  width: 100%;
-  z-index: 10;
+  place-items: center;
+  text-align: center;
+  width: 55%;
+}
+
+.nav {
+  line-height: 15px;
+}
+
+.navtext {
+  text-align: center;
 }
 
 .nav.logo {
   font-size: 6.0rem;
-  padding-top: 5px;
+  padding-bottom: 20px;
   top: 0;
   width: 100%;
 }
@@ -96,10 +101,10 @@ footer {
   bottom: 0;
   height: 10%;
   justify-content: center;
-  place-items: center;
   margin: 0 auto;
   margin-top: 60px;
   min-height: 65px;
+  place-items: center;
   position: fixed;
   width: 100%;
 }
@@ -299,7 +304,7 @@ audio {
 }
 
 .releasepagedescription {
-  max-width: 60%;
+  max-width: 55%;
   margin: 2px 10px;
 }
 
