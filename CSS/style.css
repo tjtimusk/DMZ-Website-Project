@@ -160,6 +160,7 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   height: 60vh;
+  margin: 5% auto;
   width: 80vw;
 }
 
@@ -169,6 +170,7 @@ footer {
     grid-gap: 5% 5%;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
+    height: 80vh
   }
 }
 
@@ -186,9 +188,9 @@ footer {
 
 .indexnavtext.nav {
   font-size: clamp(.4rem, 6vw, 10rem);
-  line-height: 150%;
+  line-height: 300%;
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 /* Background Images */
@@ -200,7 +202,7 @@ footer {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZ fabric.jpg') no-repeat center center/cover;
 }
 
-#history {
+#about {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Flyers/DMZflyer2.jpg') no-repeat center center/cover;
 }
 
