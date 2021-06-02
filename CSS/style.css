@@ -7,7 +7,7 @@ body {
   background-color: #202020;
   color: #dddddd;
   font-family: 'Helvetica', sans-serif;
-  font-size: 1.9vw;
+  font-size: clamp(10px, 1.9vw, 20px);
   margin: 0;
 }
 
@@ -44,13 +44,14 @@ a.nav {
   color: #cccccc;
   font-family: 'broken_15regular', 'Helvetica', sans-serif;
   font-size: clamp(.4rem, 4vw, 4rem);
+  letter-spacing: 0.06em;
   margin: 0 auto;
   text-align: center;
   text-decoration: none;
 }
 
 a.nav:hover {
-  /*These don;t work well with the broken 15 font....
+  /*Doesn't work well with the broken 15 font....
   text-decoration: line-through;*/
   color: #ffffff;
   transform: scale(1.05);
@@ -73,7 +74,7 @@ a.nav:hover {
 
 .navcontainer {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: auto;
   height: 100%;
   margin: 0 auto;
@@ -141,17 +142,83 @@ footer {
   -webkit-transform: scale(1.1);
 }
 
-/* Homepage Styling*/
+/* Homepage Stylings */
+.indexheader {
+  color: #cccccc;
+  font-family:
+    'broken_15regular',
+    Helvetica;
+  font-size: clamp(.4rem, 6vw, 4rem);
+  letter-spacing: 0.2em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.indexnav {
+  display: grid;
+  grid-gap: 5% 5%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  height: 60vh;
+  width: 80vw;
+}
+
+@media (max-width: 800px) {
+  .indexnav {
+    display: grid;
+    grid-gap: 5% 5%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.indexnavcontainer {
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.indexnavcontainer:hover {
+  transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+}
+
+.indexnavtext.nav {
+  font-size: clamp(.4rem, 6vw, 10rem);
+  line-height: 150%;
+  text-align: center;
+  vertical-align: center;
+}
+
+/* Background Images */
+#calendar {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZclubnight.jpg') no-repeat center center/cover;
+}
+
+#gallery {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZ fabric.jpg') no-repeat center center/cover;
+}
+
+#history {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Flyers/DMZflyer2.jpg') no-repeat center center/cover;
+}
+
+#releases {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZRELEASES.jpg') no-repeat center center/cover;
+}
+
+/* Gallery Styling*/
 /* Slideshow container */
 .carousel {
-  height: 56vw;
-  margin: 10px 10px;
+  height: 45vw;
+  margin: 2px auto;
   max-height: 675px;
   max-width: 1200px;
   min-height: 56px;
   min-width: 100px;
   position: relative;
-  width: 100vw;
+  width: 80vw;
 }
 
 .carouseltrack {
@@ -238,13 +305,22 @@ footer {
   justify-content: center;
   margin: 0 auto;
   width: 100vw;
-  max-width: 60%;
+  max-width: 75%;
   text-align: center;
 }
 
 .aboutpageheaders {
-  font-size: 15vw;
+  font-size: 17vw;
   margin: 0 auto;
+  width: 100%;
+}
+
+.aboutpageheaders.thelabel {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZcloseup.jpg') no-repeat center center/cover;
+}
+
+.aboutpageheaders.thenight {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZline.jpg') no-repeat center center/cover;
 }
 
 .caption {
@@ -267,6 +343,7 @@ footer {
 }
 
 .videocontainer {
+  justify-content: center;
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
