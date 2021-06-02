@@ -1,9 +1,13 @@
 /*Main code*/
+audio {
+  vertical-align: center;
+}
+
 body {
   background-color: #202020;
   color: #dddddd;
   font-family: 'Helvetica', sans-serif;
-  font-size: 18px;
+  font-size: 1.9vw;
   margin: 0;
 }
 
@@ -27,7 +31,7 @@ tml, body {
 
 .pagecontent {
   justify-content: center;
-  margin: 117px auto 117px;
+  margin: 9vw auto 9vw;
   place-items: center;
 }
 
@@ -39,7 +43,7 @@ p {
 a.nav {
   color: #cccccc;
   font-family: 'broken_15regular', 'Helvetica', sans-serif;
-  font-size: clamp(1rem, 7vw, 4rem);
+  font-size: clamp(.4rem, 4vw, 4rem);
   margin: 0 auto;
   text-align: center;
   text-decoration: none;
@@ -56,10 +60,10 @@ a.nav:hover {
 
 .headercontainer {
   background-color: #101010;
-  height: 10vw;
+  height: 8vw;
   justify-content: center;
   margin: 0 auto;
-  max-height: 10%;
+  max-height: 90px;
   min-height: 20px;
   place-items: center;
   position: fixed;
@@ -83,25 +87,20 @@ a.nav:hover {
   line-height: 15px;
 }
 
-.navtext {
-  text-align: center;
-}
-
 .nav.logo {
-  font-size: clamp(2rem, 10vw, 6rem);
-  padding-bottom: 20px;
-  top: 0;
+  font-size: clamp(.6rem, 8vw, 6rem);
+  margin-bottom: 5px;
 }
 
 /*Common Footer */
 footer {
   background-color: #101010;
   bottom: 0;
-  height: 10vw;
+  height: 8vw;
   justify-content: center;
   margin: 0 auto;
   margin-top: 60px;
-  max-height: 10%;
+  max-height: 90px;
   min-height: 10px;
   place-items: center;
   position: fixed;
@@ -121,12 +120,9 @@ footer {
   list-style-type: none;
 }
 
-/*.socials li a {
-  border-bottom: none;
-}*/
 .socials li img {
-  height: 6vw;
-  margin: 0px 20px;
+  height: 5vw;
+  margin: 5px 20px;
   max-height: 42px;
   max-width: 42px;
   min-height: 5px;
@@ -148,12 +144,14 @@ footer {
 /* Homepage Styling*/
 /* Slideshow container */
 .carousel {
-  height: 64vh;
+  height: 56vw;
   margin: 10px 10px;
   max-height: 675px;
   max-width: 1200px;
+  min-height: 56px;
+  min-width: 100px;
   position: relative;
-  width: 115vw;
+  width: 100vw;
 }
 
 .carouseltrack {
@@ -197,7 +195,7 @@ footer {
 }
 
 .carouselbutton img {
-  width: 20px;
+  width: 2vw;
   fill: white;
 }
 
@@ -211,7 +209,7 @@ footer {
 
 /* Fading animation */
 .fade {
-  animation-duration: 0.5s;
+  animation-duration: 0.7s;
   animation-name: fade;
 }
 
@@ -239,32 +237,48 @@ footer {
 .abouttext {
   justify-content: center;
   margin: 0 auto;
+  width: 100vw;
   max-width: 60%;
+  text-align: center;
 }
 
-.divider {
-  display: grid;
-  justify-content: center;
+.aboutpageheaders {
+  font-size: 15vw;
   margin: 0 auto;
-}
-
-.intextmedia {
-  display: grid;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.intextmedia img {
-  justify-content: center;
-  margin: 0 auto;
-  max-height: 400px;
 }
 
 .caption {
-  font-size: 1.1rem;
+  font-size: 1.5vw;
   justify-content: center;
-  margin: 10px auto;
+  margin: 2vw auto;
   opacity: .8;
+}
+
+.intextmedia {
+  justify-content: center;
+  margin: 5vw auto;
+}
+
+.intextmedia img {
+  height: 60vw;
+  justify-content: center;
+  max-height: 600px;
+  width: auto;
+}
+
+.videocontainer {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.videocontainer iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 /*Full Release Page Styling */
@@ -275,7 +289,7 @@ section.releasecontainer {
   /*grid-template-columns: repeat(auto-fill, 1 minmax(50px 1fr));*/
   grid-template-rows: auto;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 5vw;
   place-items: center;
 }
 
@@ -304,10 +318,6 @@ section.releasecontainer {
 }
 
 /*Individual Release Page Styling*/
-audio {
-  vertical-align: center;
-}
-
 .audiosamplecontainers {
   text-align: center;
   justify-content: center;
