@@ -310,7 +310,7 @@ footer {
 }
 
 .aboutpageheaders {
-  font-size: 17vw;
+  font-size: clamp(0.5rem, 12vw, 15rem);
   margin: 0 auto;
   width: 100%;
 }
