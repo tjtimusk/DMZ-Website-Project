@@ -7,7 +7,7 @@ body {
   background-color: #202020;
   color: #dddddd;
   font-family: 'Helvetica', sans-serif;
-  font-size: clamp(16px, 1.7vw, 18px);
+  font-size: clamp(16px, 1.5vw, 18px);
   margin: 0;
 }
 
@@ -168,7 +168,7 @@ footer {
 @media (min-width: 800px) {
   .indexnav {
     display: grid;
-    grid-gap: 5% 5%;
+    grid-gap: 5% 2%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     height: 60vh;
@@ -176,9 +176,10 @@ footer {
 }
 
 .indexnavcontainer {
+  display: grid;
   height: 100%;
-  max-height: 300px;
-  max-width: 500px;
+  max-height: 350px;
+  max-width: 700px;
   text-align: center;
   width: 100%;
 }
@@ -374,12 +375,6 @@ section.releasecontainer {
   place-items: center;
 }
 
-/* code to change page on mobile
-@media (min-width: 800px) {
-  section.releasecontainer {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}*/
 .releaseimg {
   background-color: #000000;
   opacity: .80;
@@ -407,9 +402,17 @@ section.releasecontainer {
 
 /*Individual Release Page Styling*/
 .audiosamplegrid {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(2, 1fr);
+  display: inline-grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 1vw;
+}
+
+@media (min-width: 1400px) {
+  .audiosamplegrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 
 .audiosamplecontainer {
@@ -419,28 +422,26 @@ section.releasecontainer {
 }
 
 .audiotitle {
-  font-size: .9rem;
+  font-size: 14px;
 }
 
 .releasepagedescription {
+  margin: 0 auto;
   width: 80%;
-  margin: 2px 10px;
-  top: 0;
+  justify-content: center;
+  vertical-align: middle;
 }
 
 .releasepagecontainer {
-  align-items: center;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  justify-content: center;
-  margin: 0 auto;
+  margin: 2vh auto;
   max-width: 80%;
-  place-items: center;
   text-align: center;
   /*padding: 30px;*/
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1400px) {
   .releasepagecontainer {
     grid-template-columns: 1fr 3fr;
     grid-gap: 0 1vw;
@@ -456,22 +457,21 @@ section.releasecontainer {
 }
 
 .releasepageimgcontainer {
-  align-items: center;
   display: flex;
-  height: 100%;
-  justify-content: center;
+  height: auto;
   margin: 0 auto;
+  justify-content: center;
   max-height: 450px;
   max-width: 450px;
-  place-items: center;
   width: 100%;
+  vertical-align: top;
 }
 
 .releasepagetitle {
   display: flex;
   /*Tried with the DMZ font but it doesn't look great
   font-family: 'broken_15regular';*/
-  font-size: clamp(20px, 4vw, 40px);
+  font-size: clamp(18px, 4vw, 26px);
   justify-content: center;
   margin: 0 auto;
 }

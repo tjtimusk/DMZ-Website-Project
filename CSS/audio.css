@@ -3,7 +3,7 @@ audio {
   height: 5vh;
   max-height: 20px;
   max-width: 250px;
-  min-width: 185px;
+  min-width: 100px;
   align-items: center;
-  width: 40vw;
+  width: 35vw;
 }
