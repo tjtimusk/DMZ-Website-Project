@@ -168,7 +168,7 @@ footer {
 @media (min-width: 800px) {
   .indexnav {
     display: grid;
-    grid-gap: 5% 2%;
+    grid-gap: 5% 4%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     height: 60vh;
