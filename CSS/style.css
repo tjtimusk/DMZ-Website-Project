@@ -1,4 +1,13 @@
-/*Main code*/
+/*
+
+ ######   ######## ##    ## ######## ########     ###    ##
+##    ##  ##       ###   ## ##       ##     ##   ## ##   ##
+##        ##       ####  ## ##       ##     ##  ##   ##  ##
+##   #### ######   ## ## ## ######   ########  ##     ## ##
+##    ##  ##       ##  #### ##       ##   ##   ######### ##
+##    ##  ##       ##   ### ##       ##    ##  ##     ## ##
+ ######   ######## ##    ## ######## ##     ## ##     ## ########
+*/
 audio {
   vertical-align: center;
 }
@@ -7,8 +16,8 @@ body {
   background-color: #202020;
   color: #dddddd;
   font-family: 'Helvetica', sans-serif;
-  font-size: clamp(16px, 1.5vw, 18px);
-  margin: 0;
+  font-size: clamp(16px, 1.7vw, 19px);
+  margin: 0 auto;
 }
 
 @font-face {
@@ -29,13 +38,18 @@ tml, body {
   place-items: center;
 }
 
-.pagecontent {
-  justify-content: center;
-  margin: 9vw auto 9vw;
-  place-items: center;
+.page-content-container {
+  margin-top: clamp(20px, 8vw, 90px);
+  margin-bottom: clamp(20px, 8vw, 90px);
 }
 
-/*Common Header/Navigation bar */
+/*
+
+
+Common Header/Navigation bar
+
+
+*/
 p {
   color: #cccccc;
 }
@@ -63,18 +77,19 @@ a.nav:hover {
   background-color: #101010;
   height: 8vw;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 0;
   max-height: 90px;
   min-height: 20px;
   place-items: center;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 5;
 }
 
 .navcontainer {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   height: 100%;
   margin: 0 auto;
@@ -93,14 +108,20 @@ a.nav:hover {
   margin-bottom: 5px;
 }
 
-/*Common Footer */
+/*
+
+
+Common Footer
+
+
+*/
 footer {
   background-color: #101010;
   bottom: 0;
   height: 8vw;
   justify-content: center;
   margin: 0 auto;
-  margin-top: 60px;
+  /*margin-top: 8vw;*/
   max-height: 90px;
   min-height: 10px;
   place-items: center;
@@ -111,7 +132,7 @@ footer {
 }
 
 .socials {
-  bottom: 0;
+  bottom: 2;
   padding: 0 auto;
   text-align: center;
   vertical-align: center;
@@ -123,7 +144,7 @@ footer {
 }
 
 .socials li img {
-  height: 5vw;
+  height: 4.2vw;
   margin: 5px 20px;
   max-height: 42px;
   max-width: 42px;
@@ -143,7 +164,15 @@ footer {
   -webkit-transform: scale(1.1);
 }
 
-/* Homepage Stylings */
+/*
+#### ##    ## ########  ######## ##     ##
+ ##  ###   ## ##     ## ##        ##   ##
+ ##  ####  ## ##     ## ##         ## ##
+ ##  ## ## ## ##     ## ######      ###
+ ##  ##  #### ##     ## ##         ## ##
+ ##  ##   ### ##     ## ##        ##   ##
+#### ##    ## ########  ######## ##     ##
+*/
 .indexheader {
   color: #cccccc;
   font-family:
@@ -214,11 +243,233 @@ footer {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZRELEASES.jpg') no-repeat center center/cover;
 }
 
-/* Gallery Styling*/
+/*
+   ###    ########   #######  ##     ## ########
+  ## ##   ##     ## ##     ## ##     ##    ##
+ ##   ##  ##     ## ##     ## ##     ##    ##
+##     ## ########  ##     ## ##     ##    ##
+######### ##     ## ##     ## ##     ##    ##
+##     ## ##     ## ##     ## ##     ##    ##
+##     ## ########   #######   #######     ##
+*/
+.abouttext {
+  justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 75%;
+  text-align: center;
+}
+
+.about-page-header-container {
+  height: calc(100vh - 10vw);
+  margin: 0 auto;
+  padding: 0;
+  width: 100vw;
+}
+
+.about-page-header {
+  font-size: clamp(0.5rem, 12vmin, 15rem);
+  padding: 25vmin 10vmin;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.about-page-header-container.the-label {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZcloseup.jpg') no-repeat center center/cover;
+}
+
+.about-page-header-container.the-night {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZline.jpg') no-repeat center center/cover;
+}
+
+.caption {
+  font-size: 1.5vw;
+  justify-content: center;
+  margin: 2vw auto;
+  opacity: .8;
+}
+
+.intextmedia {
+  justify-content: center;
+  margin: 5vw auto;
+}
+
+.intextmedia img {
+  height: 60vw;
+  justify-content: center;
+  max-height: 600px;
+  width: auto;
+}
+
+.videocontainer {
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.videocontainer iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*
+########  ######## ##       ########    ###     ######  ########  ######
+##     ## ##       ##       ##         ## ##   ##    ## ##       ##    ##
+##     ## ##       ##       ##        ##   ##  ##       ##       ##
+########  ######   ##       ######   ##     ##  ######  ######    ######
+##   ##   ##       ##       ##       #########       ## ##             ##
+##    ##  ##       ##       ##       ##     ## ##    ## ##       ##    ##
+##     ## ######## ######## ######## ##     ##  ######  ########  ######
+*/
+section.releasecontainer {
+  display: grid;
+  grid-gap: 2vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  margin: 2vh auto;
+  place-items: center;
+}
+
+.releaseimg {
+  background-color: #000000;
+  opacity: .80;
+  height: auto;
+  max-height: auto;
+  max-width: 250px;
+  min-height: auto;
+  min-width: 50px;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.releaseimg:hover {
+  opacity: 100%;
+  transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+}
+
+.releasepagetext {
+  text-align: center;
+  color: #aaaaaa;
+  font-size: clamp(14px, 1.7vw, 20px);
+}
+
+/*
+
+
+Individual Release Page Styling
+
+
+*/
+.audiosamplegrid {
+  display: inline-grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 1vw;
+}
+
+@media (min-width: 1400px) {
+  .audiosamplegrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.audiosamplecontainer {
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.audiotitle {
+  font-size: 14px;
+}
+
+.releasepagedescription {
+  margin: 0 auto;
+  width: 80%;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.releasepagecontainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 3vh auto;
+  max-width: 80%;
+  text-align: center;
+  /*padding: 30px;*/
+}
+
+@media (min-width: 1400px) {
+  .releasepagecontainer {
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 0 1vw;
+  }
+}
+
+.releasepageimg {
+  border-radius: 50%;
+  height: auto;
+  max-height: 450px;
+  max-width: 450px;
+  width: 35vw;
+}
+
+.releasepageimgcontainer {
+  display: flex;
+  height: auto;
+  margin: 0 auto;
+  justify-content: center;
+  max-height: 450px;
+  max-width: 450px;
+  width: 100%;
+  vertical-align: top;
+}
+
+.releasepagetitle {
+  display: flex;
+  /*Tried with the DMZ font but it doesn't look great
+  font-family: 'broken_15regular';*/
+  font-size: clamp(18px, 4vw, 26px);
+  justify-content: center;
+  margin: 2vh auto;
+}
+
+/* Release page Hover FX */
+.releasepageimg.reverse {
+  display: none;
+}
+
+.releasepageimgcontainer:hover>.releasepageimg.cover {
+  display: none;
+}
+
+.releasepageimgcontainer:hover>.releasepageimg.reverse {
+  display: flex;
+  z-index: 2;
+}
+
+/*
+ ######      ###    ##       ##       ######## ########  ##    ##
+##    ##    ## ##   ##       ##       ##       ##     ##  ##  ##
+##         ##   ##  ##       ##       ##       ##     ##   ####
+##   #### ##     ## ##       ##       ######   ########     ##
+##    ##  ######### ##       ##       ##       ##   ##      ##
+##    ##  ##     ## ##       ##       ##       ##    ##     ##
+ ######   ##     ## ######## ######## ######## ##     ##    ##
+*/
 /* Slideshow container */
 .carousel {
   height: 45vw;
-  margin: 2px auto;
+  margin: 2vh auto;
   max-height: 675px;
   max-width: 1200px;
   min-height: 56px;
@@ -304,188 +555,4 @@ footer {
   to {
     opacity: 1
   }
-}
-
-/*About Page Styling*/
-.abouttext {
-  justify-content: center;
-  margin: 0 auto;
-  width: 100vw;
-  max-width: 75%;
-  text-align: center;
-}
-
-.aboutpageheaders {
-  font-size: clamp(0.5rem, 12vw, 15rem);
-  margin: 0 auto;
-  width: 100%;
-}
-
-.aboutpageheaders.thelabel {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZcloseup.jpg') no-repeat center center/cover;
-}
-
-.aboutpageheaders.thenight {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZline.jpg') no-repeat center center/cover;
-}
-
-.caption {
-  font-size: 1.5vw;
-  justify-content: center;
-  margin: 2vw auto;
-  opacity: .8;
-}
-
-.intextmedia {
-  justify-content: center;
-  margin: 5vw auto;
-}
-
-.intextmedia img {
-  height: 60vw;
-  justify-content: center;
-  max-height: 600px;
-  width: auto;
-}
-
-.videocontainer {
-  justify-content: center;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-}
-
-.videocontainer iframe {
-  border: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-/*Full Release Page Styling */
-section.releasecontainer {
-  display: grid;
-  grid-gap: 2vw;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  justify-content: center;
-  margin: 0 10px;
-  place-items: center;
-}
-
-.releaseimg {
-  background-color: #000000;
-  opacity: .80;
-  height: auto;
-  max-height: auto;
-  max-width: 250px;
-  min-height: auto;
-  min-width: 50px;
-  border-radius: 50%;
-  width: 100%;
-}
-
-.releaseimg:hover {
-  opacity: 100%;
-  transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-}
-
-.releasepagetext {
-  text-align: center;
-  color: #aaaaaa;
-  font-size: clamp(14px, 1.7vw, 20px);
-}
-
-/*Individual Release Page Styling*/
-.audiosamplegrid {
-  display: inline-grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-gap: 1vw;
-}
-
-@media (min-width: 1400px) {
-  .audiosamplegrid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
-
-.audiosamplecontainer {
-  text-align: center;
-  justify-content: center;
-  vertical-align: middle;
-}
-
-.audiotitle {
-  font-size: 14px;
-}
-
-.releasepagedescription {
-  margin: 0 auto;
-  width: 80%;
-  justify-content: center;
-  vertical-align: middle;
-}
-
-.releasepagecontainer {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  margin: 2vh auto;
-  max-width: 80%;
-  text-align: center;
-  /*padding: 30px;*/
-}
-
-@media (min-width: 1400px) {
-  .releasepagecontainer {
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 0 1vw;
-  }
-}
-
-.releasepageimg {
-  border-radius: 50%;
-  height: auto;
-  max-height: 450px;
-  max-width: 450px;
-  width: 35vw;
-}
-
-.releasepageimgcontainer {
-  display: flex;
-  height: auto;
-  margin: 0 auto;
-  justify-content: center;
-  max-height: 450px;
-  max-width: 450px;
-  width: 100%;
-  vertical-align: top;
-}
-
-.releasepagetitle {
-  display: flex;
-  /*Tried with the DMZ font but it doesn't look great
-  font-family: 'broken_15regular';*/
-  font-size: clamp(18px, 4vw, 26px);
-  justify-content: center;
-  margin: 0 auto;
-}
-
-/* Release page Hover FX */
-.releasepageimg.reverse {
-  display: none;
-}
-
-.releasepageimgcontainer:hover>.releasepageimg.cover {
-  display: none;
-}
-
-.releasepageimgcontainer:hover>.releasepageimg.reverse {
-  display: flex;
-  z-index: 2;
 }
