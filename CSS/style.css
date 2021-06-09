@@ -38,6 +38,10 @@ tml, body {
   place-items: center;
 }
 
+p {
+  color: #cccccc;
+}
+
 .page-content-container {
   margin-top: clamp(20px, 8vw, 90px);
   margin-bottom: clamp(20px, 8vw, 90px);
@@ -50,17 +54,13 @@ Common Header/Navigation bar
 
 
 */
-p {
-  color: #cccccc;
-}
-
 a.nav {
   color: #cccccc;
   font-family: 'broken_15regular', 'Helvetica', sans-serif;
-  font-size: clamp(19px, 4vw, 4rem);
+  font-size: clamp(19px, 4vw, 60px);
   letter-spacing: 0.06em;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
 }
 
@@ -76,8 +76,7 @@ a.nav:hover {
 .headercontainer {
   background-color: #101010;
   height: 8vw;
-  justify-content: center;
-  margin: 0 0;
+  /*justify-content: center;*/
   max-height: 90px;
   min-height: 20px;
   place-items: center;
@@ -89,13 +88,12 @@ a.nav:hover {
 
 .navcontainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 33% 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   height: 100%;
-  margin: 0 auto;
   overflow: hidden;
   place-items: center;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
@@ -104,8 +102,9 @@ a.nav:hover {
 }
 
 .nav.logo {
-  font-size: clamp(.6rem, 8vw, 6rem);
+  font-size: clamp(20px, 8vw, 80px);
   margin-bottom: 5px;
+  text-align: left;
 }
 
 /*
