@@ -185,7 +185,7 @@ footer {
   text-align: center;
 }
 
-.index-nav {
+.index-nav-container {
   display: grid;
   grid-gap: 5% 5%;
   grid-template-columns: repeat(1, 1fr);
@@ -196,7 +196,7 @@ footer {
 }
 
 @media (min-width: 800px) {
-  .index-nav {
+  .index-nav-container {
     display: grid;
     grid-gap: 5% 4%;
     grid-template-columns: repeat(2, 1fr);
@@ -205,7 +205,7 @@ footer {
   }
 }
 
-.index-nav-container {
+.index-nav {
   display: grid;
   height: 100%;
   max-height: 350px;
@@ -214,15 +214,22 @@ footer {
   width: 100%;
 }
 
-.index-nav-container:hover {
+.index-nav:hover {
   transform: scale(1.05);
   -ms-transform: scale(1.05);
   -webkit-transform: scale(1.05);
 }
 
-.index-nav-text.nav {
+.index-nav:hover>.index-nav-text {
+  color: #ffffff;
+  transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+}
+
+.index-nav-text {
   font-size: clamp(.4rem, 6vw, 10rem);
-  line-height: 15vw;
+  line-height: 10vw;
   text-align: center;
   vertical-align: middle;
 }
