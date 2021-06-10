@@ -14,7 +14,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("slideimg");
+  var slides = document.getElementsByClassName("slide-img");
   var dots = document.getElementsByClassName("dot");
   if(n > slides.length) {
     slideIndex = 1
@@ -39,7 +39,7 @@ showSlides();
 
 function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("slideimg");
+  var slides = document.getElementsByClassName("slide-img");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }

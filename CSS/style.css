@@ -35,6 +35,7 @@ tml, body {
   font-weight: 300;
   line-height: 1.5;
   min-height: 100%;
+  min-width: 350px;
   place-items: center;
 }
 
@@ -57,7 +58,7 @@ Common Header/Navigation bar
 a.nav {
   color: #cccccc;
   font-family: 'broken_15regular', 'Helvetica', sans-serif;
-  font-size: clamp(19px, 4vw, 60px);
+  font-size: clamp(24px, 4vw, 60px);
   letter-spacing: 0.06em;
   margin: 0 auto;
   text-align: left;
@@ -73,12 +74,13 @@ a.nav:hover {
   -webkit-transform: scale(1.05);
 }
 
-.headercontainer {
+.header-container {
   background-color: #101010;
   height: 8vw;
   /*justify-content: center;*/
   max-height: 90px;
-  min-height: 20px;
+  min-height: 30px;
+  min-width: 350px;
   place-items: center;
   position: fixed;
   top: 0;
@@ -86,9 +88,9 @@ a.nav:hover {
   z-index: 5;
 }
 
-.navcontainer {
+.nav-container {
   display: grid;
-  grid-template-columns: 33% 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   height: 100%;
   overflow: hidden;
@@ -102,7 +104,7 @@ a.nav:hover {
 }
 
 .nav.logo {
-  font-size: clamp(20px, 8vw, 80px);
+  font-size: clamp(30px, 8vw, 80px);
   margin-bottom: 5px;
   text-align: left;
 }
@@ -118,37 +120,38 @@ footer {
   background-color: #101010;
   bottom: 0;
   height: 8vw;
-  justify-content: center;
   margin: 0 auto;
-  /*margin-top: 8vw;*/
   max-height: 90px;
-  min-height: 10px;
-  place-items: center;
+  min-height: 30px;
+  min-width: 350px;
   position: fixed;
   width: 100%;
-  vertical-align: center;
   z-index: 5;
 }
 
 .socials {
-  bottom: 2;
-  padding: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  margin: 0 auto;
+  place-items: center;
   text-align: center;
-  vertical-align: center;
+  width: 80%;
 }
 
 .socials li {
-  display: inline-block;
   list-style-type: none;
+  margin: 2vmin auto 2vmin;
 }
 
 .socials li img {
-  height: 4.2vw;
-  margin: 5px 20px;
+  height: 5vmin;
   max-height: 42px;
   max-width: 42px;
-  min-height: 5px;
-  min-width: 5px;
+  min-height: 10px;
+  min-width: 10px;
   opacity: .75;
   width: auto;
 }
@@ -172,10 +175,9 @@ footer {
  ##  ##   ### ##     ## ##        ##   ##
 #### ##    ## ########  ######## ##     ##
 */
-.indexheader {
+.index-banner {
   color: #cccccc;
-  font-family:
-    'broken_15regular',
+  font-family: 'broken_15regular',
     Helvetica;
   font-size: clamp(.4rem, 6vw, 4rem);
   letter-spacing: 0.2em;
@@ -183,7 +185,7 @@ footer {
   text-align: center;
 }
 
-.indexnav {
+.index-nav {
   display: grid;
   grid-gap: 5% 5%;
   grid-template-columns: repeat(1, 1fr);
@@ -194,7 +196,7 @@ footer {
 }
 
 @media (min-width: 800px) {
-  .indexnav {
+  .index-nav {
     display: grid;
     grid-gap: 5% 4%;
     grid-template-columns: repeat(2, 1fr);
@@ -203,7 +205,7 @@ footer {
   }
 }
 
-.indexnavcontainer {
+.index-nav-container {
   display: grid;
   height: 100%;
   max-height: 350px;
@@ -212,13 +214,13 @@ footer {
   width: 100%;
 }
 
-.indexnavcontainer:hover {
+.index-nav-container:hover {
   transform: scale(1.05);
   -ms-transform: scale(1.05);
   -webkit-transform: scale(1.05);
 }
 
-.indexnavtext.nav {
+.index-nav-text.nav {
   font-size: clamp(.4rem, 6vw, 10rem);
   line-height: 15vw;
   text-align: center;
@@ -251,7 +253,7 @@ footer {
 ##     ## ##     ## ##     ## ##     ##    ##
 ##     ## ########   #######   #######     ##
 */
-.abouttext {
+.about-page-text {
   justify-content: center;
   margin: 0 auto;
   width: 100vw;
@@ -288,12 +290,12 @@ footer {
   opacity: .8;
 }
 
-.intextmedia {
+.about-page-media {
   justify-content: center;
   margin: 5vw auto;
 }
 
-.intextmedia img {
+.about-page-media img {
   height: 60vw;
   justify-content: center;
   max-height: 600px;
@@ -367,7 +369,7 @@ Individual Release Page Styling
 
 
 */
-.audiosamplegrid {
+.audio-sample-grid-container {
   display: inline-grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -375,30 +377,30 @@ Individual Release Page Styling
 }
 
 @media (min-width: 1400px) {
-  .audiosamplegrid {
+  .audio-sample-grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
 }
 
-.audiosamplecontainer {
+.audio-sample-container {
   text-align: center;
   justify-content: center;
   vertical-align: middle;
 }
 
-.audiotitle {
+.audio-title {
   font-size: 14px;
 }
 
-.releasepagedescription {
+.release-page-description-container {
   margin: 0 auto;
   width: 80%;
   justify-content: center;
   vertical-align: middle;
 }
 
-.releasepagecontainer {
+.release-page-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   margin: 3vh auto;
@@ -408,13 +410,13 @@ Individual Release Page Styling
 }
 
 @media (min-width: 1400px) {
-  .releasepagecontainer {
+  .release-page-container {
     grid-template-columns: 1fr 3fr;
     grid-gap: 0 1vw;
   }
 }
 
-.releasepageimg {
+.release-page-img {
   border-radius: 50%;
   height: auto;
   max-height: 450px;
@@ -422,7 +424,7 @@ Individual Release Page Styling
   width: 35vw;
 }
 
-.releasepageimgcontainer {
+.release-page-img-container {
   display: flex;
   height: auto;
   margin: 0 auto;
@@ -433,7 +435,7 @@ Individual Release Page Styling
   vertical-align: top;
 }
 
-.releasepagetitle {
+.release-page-title {
   display: flex;
   /*Tried with the DMZ font but it doesn't look great
   font-family: 'broken_15regular';*/
@@ -443,15 +445,15 @@ Individual Release Page Styling
 }
 
 /* Release page Hover FX */
-.releasepageimg.reverse {
+.release-page-img.reverse {
   display: none;
 }
 
-.releasepageimgcontainer:hover>.releasepageimg.cover {
+.release-page-img-container:hover>.release-page-img.cover {
   display: none;
 }
 
-.releasepageimgcontainer:hover>.releasepageimg.reverse {
+.release-page-img-container:hover>.release-page-img.reverse {
   display: flex;
   z-index: 2;
 }
@@ -477,7 +479,7 @@ Individual Release Page Styling
   width: 80vw;
 }
 
-.carouseltrack {
+.carousel-track {
   height: 100%;
   list-style: none;
   margin: 0;
@@ -489,7 +491,7 @@ Individual Release Page Styling
   width: 100%;
 }
 
-.carouseltrackcontainer {
+.carousel-track-container {
   height: 100%;
   max-height: 675px;
   max-width: 1200px;
@@ -497,7 +499,7 @@ Individual Release Page Styling
   width: 100%;
 }
 
-.slideimg {
+.slide-img {
   height: 100%;
   display: none;
   max-height: 675px;
@@ -507,7 +509,7 @@ Individual Release Page Styling
 }
 
 /* Hide the images by default */
-.carouselbutton {
+.carousel-button {
   background: transparent;
   border: 0;
   bottom: 50%;
@@ -517,16 +519,16 @@ Individual Release Page Styling
   transform: translateY(-50%);
 }
 
-.carouselbutton img {
+.carousel-button img {
   width: 2vw;
   fill: white;
 }
 
-.carouselbutton.prev {
+.carousel-button.prev {
   left: -40px;
 }
 
-.carouselbutton.next {
+.carousel-button.next {
   right: -40px;
 }
 
