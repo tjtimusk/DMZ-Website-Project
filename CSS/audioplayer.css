@@ -1,0 +1,130 @@
+/* Palette */
+:root {
+  --main-text-color: #bbbbbb;
+  --sub-text-color: #999999;
+  --pink-progress: #fe8daa;
+}
+
+/* General Styles & Layout */
+.action-button {
+  background: inherit;
+  border: 0;
+  color: var(--main-text-color);
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.audio-player-container {
+  box-sizing: border-box;
+  background: radial-gradient(#202020 1%, #101010 99%);
+  border-radius: 2px 2px;
+  border: solid .5px #555555;
+  /*box-shadow: 0 2vh 2vw 0 #101010;*/
+  display: flex;
+  height: 10vw;
+  position: relative;
+  margin: 0 auto;
+  max-height: 90px;
+  max-width: 450px;
+  min-height: 50px;
+  min-width: 250px;
+  overflow: hidden;
+  width: 40vw;
+}
+
+.audio-sources-container {
+  /*Hide the Source Data*/
+  display: none;
+}
+
+.info-control-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 80%;
+  height: 100%;
+  padding: 2% 0% 0%;
+}
+
+/* Thumbnail/Play Button */
+.thumbnail-container {
+  background: ;
+  border-radius: 50%;
+  height: 100%;
+  max-height: 90px;
+  max-width: 90px;
+  overflow: hidden;
+  position: relative;
+  width: 20%;
+}
+
+.play-pause-button {
+  background: none;
+  color: #dddddd;
+  font-size: clamp(15px, 3vw, 30px);
+  align-content: center;
+  text-align: center;
+  vertical-align: middle;
+  object-fit: cover;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+/* Artist Title & Song Name */
+.audio-details {
+  display: inline;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-height: 100%;
+  font-weight: normal;
+  line-height: 0;
+}
+
+.audio-details h2 {
+  color: var(--main-text-color);
+  font-size: clamp(12px, 2vw, 16px);
+}
+
+.audio-details p {
+  color: var(--sub-text-color);
+  font-size: clamp(10px, 1vw, 14px);
+}
+
+.title-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 50%;
+}
+
+/* Forward/Backwards & Progress Bar */
+.controls {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.controls button {
+  font-size: clamp(12px, 3vw, 16px);
+}
+
+.progress-bar {
+  background-color: #707070;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.progress-container {
+  background: #cccccc;
+  cursor: pointer;
+  justify-content: center;
+  margin: 0 auto 5%;
+  max-height: 9px;
+  min-height: 2px;
+  height: 1vw;
+  width: 90%;
+}
