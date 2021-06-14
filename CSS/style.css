@@ -1,13 +1,21 @@
 /*
-
- ######   ######## ##    ## ######## ########     ###    ##
-##    ##  ##       ###   ## ##       ##     ##   ## ##   ##
-##        ##       ####  ## ##       ##     ##  ##   ##  ##
-##   #### ######   ## ## ## ######   ########  ##     ## ##
-##    ##  ##       ##  #### ##       ##   ##   ######### ##
-##    ##  ##       ##   ### ##       ##    ##  ##     ## ##
- ######   ######## ##    ## ######## ##     ## ##     ## ########
+########     ###     ######  ########
+##     ##   ## ##   ##    ## ##
+##     ##  ##   ##  ##       ##
+########  ##     ##  ######  ######
+##     ## #########       ## ##
+##     ## ##     ## ##    ## ##
+########  ##     ##  ######  ########
 */
+@font-face {
+  font-family: 'broken_15regular';
+  src: url('../media/fonts/broken15.woff2') format('woff2'),
+    url('../media/fonts/broken15.woff') format('woff'),
+    url('../media/fonts/broken15.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
 audio {
   vertical-align: center;
 }
@@ -17,16 +25,22 @@ body {
   color: #dddddd;
   font-family: 'Helvetica', sans-serif;
   font-size: clamp(16px, 1.7vw, 19px);
+  height: 100vh;
   margin: 0 auto;
+  width: 100vw;
 }
 
-@font-face {
-  font-family: 'broken_15regular';
-  src: url('../media/fonts/broken15.woff2') format('woff2'),
-    url('../media/fonts/broken15.woff') format('woff'),
-    url('../media/fonts/broken15.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
+footer {
+  background-color: #101010;
+  bottom: 0;
+  height: 8vw;
+  margin: 0 auto;
+  max-height: 90px;
+  min-height: 30px;
+  min-width: 350px;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
 }
 
 tml, body {
@@ -49,12 +63,15 @@ p {
 }
 
 /*
-
-
-Common Header/Navigation bar
-
-
+ ######  #### ######## ######## ##      ## #### ########  ########
+##    ##  ##     ##    ##       ##  ##  ##  ##  ##     ## ##
+##        ##     ##    ##       ##  ##  ##  ##  ##     ## ##
+ ######   ##     ##    ######   ##  ##  ##  ##  ##     ## ######
+      ##  ##     ##    ##       ##  ##  ##  ##  ##     ## ##
+##    ##  ##     ##    ##       ##  ##  ##  ##  ##     ## ##
+ ######  ####    ##    ########  ###  ###  #### ########  ########
 */
+/* Header */
 a.nav {
   color: #cccccc;
   font-family: 'broken_15regular', 'Helvetica', sans-serif;
@@ -109,26 +126,7 @@ a.nav:hover {
   text-align: left;
 }
 
-/*
-
-
-Common Footer
-
-
-*/
-footer {
-  background-color: #101010;
-  bottom: 0;
-  height: 8vw;
-  margin: 0 auto;
-  max-height: 90px;
-  min-height: 30px;
-  min-width: 350px;
-  position: fixed;
-  width: 100%;
-  z-index: 5;
-}
-
+/* Footer */
 .socials {
   height: 100%;
   display: grid;
@@ -190,15 +188,15 @@ footer {
   grid-gap: 5% 5%;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
-  height: 80vh;
+  height: auto;
   margin: 2% auto;
-  width: 80vw;
+  width: 90vw;
 }
 
 @media (min-width: 800px) {
   .index-nav-container {
     display: grid;
-    grid-gap: 5% 4%;
+    grid-gap: 5% 5%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     height: 60vh;
@@ -208,8 +206,8 @@ footer {
 .index-nav {
   display: grid;
   height: 100%;
-  max-height: 350px;
-  max-width: 700px;
+  max-height: 300px;
+  max-width: 900px;
   text-align: center;
   width: 100%;
 }
@@ -235,16 +233,16 @@ footer {
 }
 
 /* Background Images */
+#about {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Flyers/DMZflyer2.jpg') no-repeat center center/cover;
+}
+
 #calendar {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZclubnight.jpg') no-repeat center center/cover;
 }
 
 #gallery {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Photos/DMZ fabric.jpg') no-repeat center center/cover;
-}
-
-#about {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Media/Images/Flyers/DMZflyer2.jpg') no-repeat center center/cover;
 }
 
 #releases {
@@ -309,14 +307,14 @@ footer {
   width: auto;
 }
 
-.videocontainer {
+.video-container {
   justify-content: center;
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-.videocontainer iframe {
+.video-container iframe {
   border: 0;
   height: 100%;
   left: 0;
@@ -334,7 +332,7 @@ footer {
 ##    ##  ##       ##       ##       ##     ## ##    ## ##       ##    ##
 ##     ## ######## ######## ######## ##     ##  ######  ########  ######
 */
-section.releasecontainer {
+section.release-container {
   display: grid;
   grid-gap: 2vw;
   grid-template-columns: repeat(4, 1fr);
@@ -344,7 +342,7 @@ section.releasecontainer {
   place-items: center;
 }
 
-.releaseimg {
+.release-img {
   background-color: #000000;
   opacity: .80;
   height: auto;
@@ -356,26 +354,20 @@ section.releasecontainer {
   width: 100%;
 }
 
-.releaseimg:hover {
+.release-img:hover {
   opacity: 100%;
   transform: scale(1.05);
   -ms-transform: scale(1.05);
   -webkit-transform: scale(1.05);
 }
 
-.releasepagetext {
+.release-page-text {
   text-align: center;
   color: #aaaaaa;
   font-size: clamp(14px, 1.7vw, 20px);
 }
 
-/*
-
-
-Individual Release Page Styling
-
-
-*/
+/* Individual Release Page Styling */
 .audio-sample-grid-container {
   display: inline-grid;
   grid-template-columns: repeat(1, 1fr);
@@ -564,3 +556,13 @@ Individual Release Page Styling
     opacity: 1
   }
 }
+
+/*
+ ######     ###    ##       ######## ##    ## ########     ###    ########
+##    ##   ## ##   ##       ##       ###   ## ##     ##   ## ##   ##     ##
+##        ##   ##  ##       ##       ####  ## ##     ##  ##   ##  ##     ##
+##       ##     ## ##       ######   ## ## ## ##     ## ##     ## ########
+##       ######### ##       ##       ##  #### ##     ## ######### ##   ##
+##    ## ##     ## ##       ##       ##   ### ##     ## ##     ## ##    ##
+ ######  ##     ## ######## ######## ##    ## ########  ##     ## ##     ##
+*/
