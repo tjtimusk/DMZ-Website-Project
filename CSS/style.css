@@ -427,6 +427,7 @@ section.release-container {
   width: 80%;
   justify-content: center;
   vertical-align: middle;
+  align-items: center;
 }
 
 .release-page-container {
@@ -438,7 +439,7 @@ section.release-container {
   /*padding: 30px;*/
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1000px) {
   .release-page-container {
     grid-template-columns: 1fr 3fr;
     grid-gap: 0 1vw;
@@ -447,7 +448,7 @@ section.release-container {
 
 .release-page-img {
   border-radius: 50%;
-  height: auto;
+  height: 35vw;
   max-height: 450px;
   max-width: 450px;
   width: 35vw;

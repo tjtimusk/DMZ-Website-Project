@@ -13,6 +13,7 @@ const infoTitle = document.getElementsByClassName('info-title');
 const infoArtist = document.getElementsByClassName('info-artist');
 const covers = document.getElementsByClassName('cover-art');
 const thumbnailContainer = document.querySelector('.thumbnail-container');
+const thumbnailOverlay = document.querySelector('.thumbnail-overlay');
 //Track Array & Index
 let trackIndex = 0;
 
@@ -25,19 +26,33 @@ let loadTrack = () => {
   artist.innerText = infoArtist[trackIndex].innerText;
 
   audio.src = audioSources[trackIndex].getAttribute('href');
-  thumbnailContainer.style.background = ` linear-gradient(rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)), url('${coverSource}') no-repeat center center/contain`;
+  thumbnailContainer.style.background = ` linear-gradient(rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)), url('${coverSource}') no-repeat center center/contain`;
+
 };
 
 loadTrack();
+
+// Fading Thumbnail Function
+let fadeThumbnail = () => {
+  if(audioPlayerContainer.classList.contains('playing')) {
+    thumbnailContainer.addEventListener('mouseout', () => {
+      if(audioPlayerContainer.classList.contains('playing')) {
+        thumbnailOverlay.style.opacity = `0`;
+      }
+    })
+  } else {
+    setTimeout((thumbnailOverlay.style.opacity = `.6`), 200);
+  }
+}
 
 //Play/Pause Functions
 let playTrack = () => {
   audioPlayerContainer.classList.add('playing');
   playButton.querySelector('i.fa').classList.remove('fa-play');
   playButton.querySelector('i.fa').classList.add('fa-pause');
-
   audio.play();
+  setTimeout(fadeThumbnail(), 200);
 };
 
 let pauseTrack = () => {
@@ -46,6 +61,7 @@ let pauseTrack = () => {
   playButton.querySelector('i.fa').classList.add('fa-play');
 
   audio.pause();
+  setTimeout(fadeThumbnail(), 200);
 };
 
 //Prev/Next Functions
@@ -80,7 +96,6 @@ let updateProgress = (e) => {
 
 let setProgress = (e) => {
   const width = progressContainer.clientWidth
-  console.log(width);
   const clickX = e.offsetX;
   const duration = audio.duration;
 
@@ -99,10 +114,25 @@ playButton.addEventListener('click', () => {
   }
 });
 
-prevButton.addEventListener('click', prevTrack);
-nextButton.addEventListener('click', nextTrack);
+prevButton.addEventListener('click', () => {
+  prevTrack()
+  if(audioPlayerContainer.classList.contains('playing')) {
+    thumbnailOverlay.style.opacity = `0`;
+  }
+});
+
+nextButton.addEventListener('click', () => {
+  nextTrack()
+  if(audioPlayerContainer.classList.contains('playing')) {
+    thumbnailOverlay.style.opacity = `0`;
+  }
+});
 
 audio.addEventListener('timeupdate', updateProgress);
 audio.addEventListener('ended', nextTrack);
 
 progressContainer.addEventListener('click', setProgress);
+
+thumbnailContainer.addEventListener('mouseover', () => {
+  thumbnailOverlay.style.opacity = `.6`;
+});
