@@ -33,17 +33,17 @@
   width: 100%;
 }
 
+/*Hide the Source Data*/
 .audio-sources-container {
-  /*Hide the Source Data*/
   display: none;
 }
 
 .info-control-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 3fr 1fr;
   width: 80%;
   height: 100%;
-  padding: 2% 0% 0%;
 }
 
 /* Thumbnail/Play Button */
@@ -110,59 +110,63 @@
   opacity: .6;
 }
 
-/* Artist Title & Song Name */
+/* Artist Title & Song Name + FWD BWD controls*/
+.action-button {
+  font-size: clamp(12px, 3vw, 20px);
+}
+
 .audio-details {
   display: inline;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  max-height: 100%;
   font-weight: normal;
+  justify-content: center;
   line-height: 0;
+  max-height: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .audio-details h2 {
   color: var(--main-text-color);
-  font-size: clamp(12px, 2vw, 16px);
+  font-size: clamp(12px, 1.5vw, 16px);
+  font-weight: bold;
 }
 
 .audio-details p {
   color: var(--sub-text-color);
-  font-size: clamp(10px, 1vw, 14px);
+  font-size: clamp(12px, 1vw, 16px);
 }
 
 .title-controls {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  height: 50%;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  height: 100%;
+  padding: 0% 0% 0%;
 }
 
 /* Forward/Backwards & Progress Bar */
-.controls {
+.progress-controls {
   display: flex;
   height: 100%;
   width: 100%;
 }
 
-.controls button {
-  font-size: clamp(12px, 3vw, 16px);
-}
-
 .progress-bar {
   background-color: #707070;
   height: 100%;
-  width: 0%;
   transition: width 0.1s linear;
+  width: 0%;
 }
 
 .progress-container {
   background: #cccccc;
   cursor: pointer;
+  height: 1vw;
   justify-content: center;
   margin: 0 auto 5%;
   max-height: 9px;
   min-height: 2px;
-  height: 1vw;
   width: 90%;
 }

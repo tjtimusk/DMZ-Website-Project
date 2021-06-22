@@ -224,18 +224,18 @@ ul {
 @media (min-width: 800px) {
   .index-nav-container {
     display: grid;
-    grid-gap: 5% 5%;
+    grid-gap: 3vw 3vw;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    height: 60vh;
+    height: auto;
   }
 }
 
 .index-nav {
   display: grid;
   height: 100%;
-  max-height: 300px;
-  max-width: 900px;
+  max-height: 250px;
+  max-width: 1000px;
   text-align: center;
   width: 100%;
 }
@@ -452,6 +452,7 @@ section.release-container {
   max-height: 450px;
   max-width: 450px;
   width: 35vw;
+  margin: 2vh auto;
 }
 
 .release-page-img-container {

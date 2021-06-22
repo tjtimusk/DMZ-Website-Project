@@ -11,7 +11,8 @@
   <title>DMZ: DMZ 002</title>
 
   <link rel="stylesheet" href="../CSS/style.css">
-  <link rel="stylesheet" href="../CSS/audio.css">
+  <link rel="stylesheet" href="../CSS/audioplayer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -36,53 +37,90 @@
     </ul>
   </header>
   <article class="page-content-container">
-    <h1 class="release-page-title">DMZ 002</h1>
     <!-- Release Text, Image and Audio -->
     <div class="release-page-container">
       <div class="release-page-img-container">
         <img class="release-page-img" src="../Media/Images/Releases/DMZ002.jpg">
       </div>
       <div class="release-page-description-container">
+        <h1 class="release-page-title">DMZ 002</h1>
         <p class="release-page-description-text">
           The second DMZ release features the first of many 'Anthems' that would appear on the label. Loefah's contribution, "Horror Show," instigated a turn towards stripped-back, half-step drum patterns within the scene, and the long, dark vocal
           sample that preceeds the drop would become another staple in the genre. "Lost City" and "Jah Fire" feature heavy basslines accompanied by the eerie accents that would come to define both Mala and Coki
           tracks. "10 Dread Commandments" is a stomper, with percussion that sounds like it's rattling away in a cave. The dub inspired vocal sample would become a staple on later DMZ productions.
         </p>
-        <div class="audio-sample-grid-container">
-          <div class="audio-sample-container">
-            <p class="audio-title">
-              A1: Digital Mystikz - Lost City
-            </p>
-            <audio controls>
-              <source src="../Media/Audio/DMZ002/Digital Mystikz - Lost City.mp3">
-            </audio>
+        <!-- This is the Html for the player itself -->
+        <div class="audio-player-container">
+          <!-- This is the play/pause button & thumbnail-->
+          <div class="thumbnail-container">
+            <button id="play" class="action-button play-pause-button">
+              <i class="fa fa-play">
+              </i>
+              <div class="thumbnail-overlay"></div>
+            </button>
           </div>
-          <div class="audio-sample-container">
-            <p class="audio-title">
-              A2: Digital Mystikz - Jah Fire
-            </p>
-            <audio controls>
-              <source src="../Media/Audio/DMZ002/Digital Mystikz - Jah Fire.mp3">
-            </audio>
-          </div>
-          <div class="audio-sample-container">
-            <p class="audio-title">
-              AA1: Loefah - Horror Show
-            </p>
-            <audio controls>
-              <source src="../Media/Audio/DMZ002/Loefah - Horror Show.mp3">
-            </audio>
-          </div>
-          <div class="audio-sample-container">
-            <p class="audio-title">
-              AA2: Digital Mystikz - 10 Dread Commandments
-            </p>
-            <audio controls>
-              <source src="../Media/Audio/DMZ002/Digital Mystikz - 10 Dread Commandments.mp3">
-            </audio>
+          <!-- the next, previous buttons and the info container-->
+          <div class=info-control-container>
+            <div class="title-controls">
+              <button id="prev" class="action-button">
+                <i class="fa fa-backward"></i>
+              </button>
+              <div class="audio-details">
+                <h2 id="title"></h2>
+                <p id='artist-name'></p>
+              </div>
+              <button id="next" class="action-button">
+                <i class="fa fa-forward"></i>
+              </button>
+            </div>
+            <!-- The Progress bar -->
+            <div class="progress-controls">
+              <div class="progress-container" id="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+              </div>
+            </div>
+            <!-- Add Song titles and artist names here-->
+            <div class="audio-sources-container">
+              <ul class="audio-sources-list">
+                <li>
+                  <a class="audio-source" href="../Media/Audio/DMZ002/Digital Mystikz - Lost City.mp3">
+                    <p class="info-title">Lost City</p>
+                    <p class="info-artist">Digital Mystikz</p>
+                  </a>
+                  <img src="../Media/Images/Releases/DMZ002.jpg" alt="Cover Art" class="cover-art">
+                </li>
+                <li>
+                  <a class="audio-source" href="../Media/Audio/DMZ002/Digital Mystikz - Jah Fire.mp3">
+                    <p class="info-title">Jah Fire</p>
+                    <p class="info-artist">Digital Mystikz</p>
+                  </a>
+                  <img src="../Media/Images/Releases/DMZ002.jpg" alt="Cover Art" class="cover-art">
+                </li>
+                <li>
+                  <a class="audio-source" href="../Media/Audio/DMZ002/Loefah - Horror Show.mp3">
+                    <p class="info-title">Horror Show</p>
+                    <p class="info-artist">Loefah</p>
+                  </a>
+                  <img src="../Media/Images/Releases/DMZ002.jpg" alt="Cover Art" class="cover-art">
+                </li>
+                <li>
+                  <a class="audio-source" href="../Media/Audio/DMZ002/Digital Mystikz - 10 Dread Commandments.mp3">
+                    <p class="info-title">10 Dread Commandments</p>
+                    <p class="info-artist">Digital Mystikz</p>
+                  </a>
+                  <img src="../Media/Images/Releases/DMZ002.jpg" alt="Cover Art" class="cover-art">
+                </li>
+              </ul>
+            </div>
+            <!-- This is the actual audio element -->
+            <audio src="" id="audio"></audio>
           </div>
         </div>
+
+        <script src="../JS/audioplayer.js"></script>
+
       </div>
+    </div>
     </div>
   </article>
   <!-- Socials, etc -->
